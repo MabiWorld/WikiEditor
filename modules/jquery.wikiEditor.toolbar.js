@@ -589,14 +589,20 @@
 				}
 				if ( character && 'action' in character && 'label' in character ) {
 					actions[ character.label ] = character.action;
+
+					var content = character.label;
+					if ( 'mode' in character && character.mode == 'html' ) {
+						content = new mw.html.Raw(content);
+					}
+
 					if ( character.titleMsg !== undefined ) {
 						return mw.html.element(
 							'span',
 							{ rel: character.label, title: mw.msg( character.titleMsg ) },
-							character.label
+							content
 						);
 					} else {
-						return mw.html.element( 'span', { rel: character.label }, character.label );
+						return mw.html.element( 'span', { rel: character.label }, content );
 					}
 				}
 				mw.log( 'A character for the toolbar was undefined. This is not supposed to happen. Double check the config.' );
