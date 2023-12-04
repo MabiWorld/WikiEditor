@@ -77,6 +77,7 @@
 /* Insert Link Dialog */
 #wikieditor-toolbar-link-int-target-status {
 	float: right;
+	line-height: 1.7em;
 }
 
 #wikieditor-toolbar-link-int-target,
@@ -133,8 +134,13 @@
 
 /* File dialog */
 #wikieditor-toolbar-file-target,
-#wikieditor-toolbar-file-caption {
+#wikieditor-toolbar-file-caption,
+#wikieditor-toolbar-file-alt {
 	width: 100%;
+}
+
+.wikieditor-toolbar-file-alt-help {
+	float: right;
 }
 
 .wikieditor-toolbar-file-options {
@@ -224,22 +230,8 @@ body.rtl {
 	height: 0;
 }
 
-/* Hides from IE-mac \*/
-* html {
-	.wikieditor-toolbar-table-dimension-fields,
-	.wikieditor-toolbar-dialog-wrapper {
-		height: 1%;
-	}
-}
-
 .wikieditor-toolbar-table-dimension-fields,
 .wikieditor-toolbar-dialog-wrapper {
 	display: inline-table;
 	display: block;
-}
-
-/* End hide from IE-mac */
-/* Edit dialog */
-.wikiEditor-dialog-editoptions {
-	margin-top: 15px;
 }

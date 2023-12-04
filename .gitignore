@@ -1,6 +1,7 @@
 composer.lock
 vendor
 node_modules/
+.eslintcache
 
 # Editors
 *.kate-swp
@@ -21,4 +22,3 @@ project.index
 ## Sublime
 sublime-*
 sftp-config.json
-tests/phan/issues
